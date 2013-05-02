@@ -201,7 +201,7 @@
 				<li><a target="_blank" href="https://www.ormcoeurope.com/it/prodotti-ormco/simpli5"><img src="images/banner_simpli5.gif" /></a>
 				</li>
 				<li><a class="various fancybox.iframe"
-					href="http://www.youtube.com/embed/peDPzeJWlfw?autoplay=1"> <img
+					href="http://www.youtube.com/embed/60apYjE6UfE?rel=0"> <img
 						src="/images/damon.gif" />
 				</a>
 				</li>
