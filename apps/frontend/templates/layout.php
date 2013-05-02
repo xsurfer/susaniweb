@@ -184,6 +184,12 @@
 
 
 					</div>
+					
+					FB_FindUsOnFacebook-114.png
+				</li>
+				<li>
+					<!-- Facebook -->
+					<a class="audio" href="#" rel="/images/bg/contattaci.jpg"><img src="/images/FB_FindUsOnFacebook-114.png" /></a>									
 				</li>
 			</ul>
 		</div>
