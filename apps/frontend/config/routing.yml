@@ -1,0 +1,39 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+shownews:
+  url:   /news/:id
+  param: { module: default, action: newsread }
+  requirements:
+    id: \d+
+
+contatta:
+  url:   /contattaci
+  param: { module: default, action: contatta }
+
+convenzioni:
+  url:   /convenzioni
+  param: { module: default, action: convenzioni }
+
+info:
+  url:   /info
+  param: { module: default, action: info }
+
+showclinica:
+  url:   /clinica/:id
+  param: { module: default, action: clinica }
+  
+showterapie:
+  url:   /terapie/:id
+  param: { module: default, action: terapie }
+  requirements:
+    id: \d+
+
+terapie:
+  url:   /terapie
+  param: { module: default, action: terapie }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }

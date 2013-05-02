@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WebSocket Echo Client</title>
+<meta charset="UTF-8" />
+<script>
+	"use strict";
+
+	// Initialize everything when the window finishes loading
+	window.addEventListener("load", function(event) {
+		var counter = 0;
+		var status = document.getElementById("status");
+		var url = document.getElementById("url");
+		var open = document.getElementById("open");
+		var close = document.getElementById("close");
+		var reset = document.getElementById("reset");
+		var message = document.getElementById("message");
+		var socket;
+
+		status.textContent = "Not Connected";
+		url.value = "ws://10.42.0.1:8080/echo-test";
+		close.disabled = true;
+
+
+		// Create a new connection when the Connect button is clicked
+		open.addEventListener("click", function(event) {
+			open.disabled = true;
+			socket = new WebSocket(url.value);
+			socket.addEventListener("open", function(event) {
+				alert('Established');
+				var counter = 0;				
+				close.disabled = false;
+				status.textContent = "Connected";
+			});
+
+			// Display messages received from the server
+			socket.addEventListener("message", function(event) {
+				counter++;
+				message.textContent = counter;
+				socket.send(counter);
+			});
+
+			// Display any errors that occur
+			socket.addEventListener("error", function(event) {
+				
+				message.textContent = "Error: " + event;
+			});
+
+			socket.addEventListener("close", function(event) {
+				
+				open.disabled = false;
+				status.textContent = "Not Connected";
+			});
+		});
+
+		// Close the connection when the Disconnect button is clicked
+		close.addEventListener("click", function(event) {
+			close.disabled = true;
+			socket.close();
+		});
+
+		reset.addEventListener("click", function(event) {
+			counter = 0;
+			message.textContent = "";
+		});
+	});
+</script>
+</head>
+<body>
+	Status:
+	<span id="status"></span>
+	<br /> URL:
+	<input id="url" />
+	<br />
+	<input id="open" type="button" value="Connect" />&nbsp;
+	<input id="close" type="button" value="Disconnect" />
+	<input id="reset" type="button" value="Reset" />
+	<br />
+
+	<span id="message"></span>
+</body>
+</html>

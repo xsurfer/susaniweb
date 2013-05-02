@@ -1,0 +1,42 @@
+@import url('reset.css');
+
+
+body{
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+}
+
+.ac_content{
+	background:transparent url(../images/bg_menu.png) repeat top left;
+	height:45px;
+	width:100%;
+	font-size:36px;
+	font-weight:bold;
+	line-height:46px;
+	margin-right:1px;
+	margin-top: 10px;
+}
+
+.ac_content span.title{
+	color: #fff;
+	font-style: italic;
+	margin-left: 10px;
+	font-size:26px;
+}
+
+.ac_content span.studiosusani{
+	color: #fff;
+	font-style: italic;
+}
+
+.content {
+	margin: 20px;
+}
+
+.content p {
+	text-align: justify;
+}
+
+.content div.imgs {
+	text-align: center;
+	margin: 10px;
+}

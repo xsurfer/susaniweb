@@ -1,0 +1,17 @@
+News:
+  actAs: { Timestampable: ~ }
+  columns:
+    description:    { type: string(4000), notnull: true }
+    title:          { type: string(255) }
+ 
+Page:
+  columns:
+    name:           { type: string(255), notnull: true, unique: true }
+    title:          { type: string(255) }
+    description:    { type: string(4000), notnull: true }
+    
+Terapie:
+  columns:
+    name:           { type: string(255), notnull: true, unique: true }
+    title:          { type: string(255) }
+    description:    { type: string(4000), notnull: true }

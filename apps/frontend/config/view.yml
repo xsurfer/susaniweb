@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Dottore Roberto Susani, Dentista Odontoiatra Latina
+    description:  Lo studio dentistico Susani, è a Latina in Via Armellini 22. Visita la nostra pagina web per conoscere informazioni sul nostro centro e per scoprire le terapie praticate.
+    keywords:     dentista, latina, dottore, odontoiatra, susani
+   #language:     en
+    robots:       index, follow
+
+  stylesheets:    [main.css]
+
+  javascripts:    []
+
+  has_layout:     true
+  layout:         layout
